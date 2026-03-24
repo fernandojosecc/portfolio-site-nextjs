@@ -1,0 +1,37 @@
+.footer {
+  padding: 24px 0;
+  background-color: var(--bg-page);
+  border-top: 1px solid var(--border-light);
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLeft {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footerRight {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.building {
+  color: var(--blue-primary);
+}
+
+.inPublic {
+  color: var(--yellow-primary);
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
