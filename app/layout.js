@@ -1,25 +1,28 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Playfair_Display, DM_Mono } from 'next/font/google'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const dmMono = DM_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-dm-mono',
+  display: 'swap',
+})
 
 export const metadata = {
-  title: "Fernando Contreras | AI Tools Specialist",
-  description: "AI Tools Specialist building AI-powered apps that bridge language and technology. Based in California, shipping real tools with a bias toward getting things done.",
-};
+  title: 'Fernando Contreras — AI Tools Specialist',
+  description: 'Software development student building AI-powered apps. Bilingual EN/ES. Based in California.',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${dmMono.variable}`}>
       <body>{children}</body>
     </html>
-  );
+  )
 }
